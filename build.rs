@@ -63,7 +63,6 @@ fn main() {
             "base/ftpfr",
             "base/ftstroke",
             "base/ftsynth",
-            "base/ftsystem",
             "base/fttype1",
             "base/ftwinfnt",
             "bdf/bdf",
@@ -89,6 +88,8 @@ fn main() {
             "winfonts/winfnt",
         ],
     );
+
+    add_sources(&mut build, "freetype2/builds", &["unix/ftsystem",]);
 
     build.compile("freetype2");
 
